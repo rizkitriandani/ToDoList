@@ -34,13 +34,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone"
-        >
+        app:layout_constraintVertical_bias="0.36">
 
         <ImageView
             android:id="@+id/ivEmptyList"
@@ -58,11 +58,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/bold"
             android:text="Add new to do list by clicking '+' button."
             android:textAlignment="center"
             android:textColor="@color/colorAccentBlack"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
 
