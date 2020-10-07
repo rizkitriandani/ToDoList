@@ -19,7 +19,11 @@ class ListFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_list, container, false);
 
         view.fabAddTask.setOnClickListener {
-            findNavController().navigate(R.id.action_listFragment_to_addFragment);
+            findNavController().navigate(R.id.action_listFragment_to_addFragment)
+        }
+
+        view.listLayout.setOnClickListener {
+            findNavController().navigate(R.id.action_listFragment_to_updateFragment)
         }
 
         setHasOptionsMenu(true)
