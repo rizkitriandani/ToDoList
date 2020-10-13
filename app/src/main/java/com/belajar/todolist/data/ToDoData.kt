@@ -3,6 +3,8 @@ package com.belajar.todolist.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+
+//THIS IS THE ENTITY CLASS
 @Entity(tableName = "todo_table")
 data class ToDoData (
     @PrimaryKey(autoGenerate = true)
