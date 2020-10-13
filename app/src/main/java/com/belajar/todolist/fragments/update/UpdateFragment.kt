@@ -1,4 +1,4 @@
-package com.belajar.todolist.add
+package com.belajar.todolist.fragments.update
 
 import android.os.Bundle
 import android.view.*
@@ -6,31 +6,30 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.belajar.todolist.R
 
-class AddFragment : Fragment() {
+class UpdateFragment : Fragment() {
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-
-        // Inflate the layout for this fragment
         setHasOptionsMenu(true)
-        return inflater.inflate(R.layout.fragment_add, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_update, container, false)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.add_fragment_menu, menu)
-
+        inflater.inflate(R.menu.update_fragment_menu, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
-            R.id.menu_add_task -> {
-                findNavController().navigate(R.id.action_addFragment_to_listFragment)
-            }
+       when(item.itemId){
+           R.id.menu_save_update ->{
+               findNavController().navigate(R.id.action_updateFragment_to_listFragment)
+           }
+       }
 
-        }
         return super.onOptionsItemSelected(item)
     }
 

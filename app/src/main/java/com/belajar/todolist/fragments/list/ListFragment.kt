@@ -1,4 +1,4 @@
-package com.belajar.todolist.list
+package com.belajar.todolist.fragments.list
 
 import android.os.Bundle
 import android.view.*
