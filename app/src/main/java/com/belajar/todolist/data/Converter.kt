@@ -1,6 +1,7 @@
 package com.belajar.todolist.data
 
 import androidx.room.TypeConverter
+import com.belajar.todolist.data.models.Priority
 
 class Converter {
 

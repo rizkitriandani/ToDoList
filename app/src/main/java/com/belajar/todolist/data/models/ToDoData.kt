@@ -1,4 +1,4 @@
-package com.belajar.todolist.data
+package com.belajar.todolist.data.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
