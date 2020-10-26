@@ -13,6 +13,7 @@ import com.belajar.todolist.data.models.Priority
 import com.belajar.todolist.data.models.ToDoData
 import com.belajar.todolist.fragments.SharedViewModel
 import kotlinx.android.synthetic.main.fragment_add.*
+import kotlinx.android.synthetic.main.fragment_add.view.*
 
 class AddFragment : Fragment() {
 
@@ -30,6 +31,9 @@ class AddFragment : Fragment() {
         // Inflate the layout for this fragment
         setHasOptionsMenu(true)
         val view =inflater.inflate(R.layout.fragment_add, container, false)
+
+        view.spinnerPriority.onItemSelectedListener = sharedViewModel.listener
+
         return view
     }
 

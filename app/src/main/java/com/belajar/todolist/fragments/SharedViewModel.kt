@@ -2,10 +2,39 @@ package com.belajar.todolist.fragments
 
 import android.app.Application
 import android.text.TextUtils
+import android.view.View
+import android.widget.AdapterView
+import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
+import com.belajar.todolist.R
 import com.belajar.todolist.data.models.Priority
 
 class SharedViewModel(application:Application) : AndroidViewModel(application) {
+
+    val listener: AdapterView.OnItemSelectedListener = object :
+        AdapterView.OnItemSelectedListener{
+        override fun onItemSelected(
+            parent: AdapterView<*>?,
+            view: View?,
+            position: Int,
+            id: Long) {
+
+            when(position){
+                0 -> {(parent?.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(application, R.color.priorityRed))}
+                1 -> {(parent?.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(application, R.color.priorityYellow))}
+                2 -> {(parent?.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(application, R.color.priorityGreen))}
+            }
+
+        }
+
+        override fun onNothingSelected(parent: AdapterView<*>?) {
+            (parent?.getChildAt(0) as TextView).setTextColor(ContextCompat.getColor(application, R.color.colorAccentBlack))
+        }
+
+
+    }
+
 
     //method untuk ngecek inputan dari user
     fun verifyDataFromUser(title: String, description: String): Boolean {
