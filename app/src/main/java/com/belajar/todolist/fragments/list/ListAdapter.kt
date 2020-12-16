@@ -20,8 +20,7 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.row_layout, parent, false)
-        return  MyViewHolder(view)
+        return  MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.row_layout, parent, false))
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
@@ -44,4 +43,5 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         this.dataList = toDoData
         notifyDataSetChanged()
     }
+
 }
